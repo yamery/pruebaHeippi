@@ -14,7 +14,7 @@ export class IndicatorsComponent implements OnInit {
     this.numeroUsuarios();
   }
 
-  //this is a variable that hold number
+
   userCount:number = 0;
   userTotal:number=0;
   postsCount:number = 0;
@@ -24,20 +24,18 @@ export class IndicatorsComponent implements OnInit {
     this.jsonApiService.showPosts().subscribe(res=>{this.postsTotal=res.length;this.activarContadores()})
     }
 
-  //we have created setinterval function with arrow function and
-  //and set them in a variable that is userCountstop.
-  
+
   activarContadores(){
     let userCountstop:any = setInterval(()=>{
       this.userCount++;
-      //we need to stop this at  particular point; will use if condition
+      
       if(this.userCount ==this.userTotal)
       {
-        //clearinterval will stop tha function
+        
         clearInterval(userCountstop);
       }
   
-    },10) //10 is milisecond you can control it
+    },10) 
     
     let postsCountstop:any = setInterval(()=>{
       this.postsCount++;
