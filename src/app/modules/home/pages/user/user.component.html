@@ -1,0 +1,43 @@
+<div class="d-flex flex-column align-items-center">
+    <div class="p-2"><img src="../../../../../assets/img/de05dc063d5acee5134361a6d5567437e3c895f7-93x25.svg" alt="" height="40px" width="200px"></div>
+    <div class="client-count-wrp mt-2 p-0 container-fluid">
+
+        <div class="heading">
+            <h1 class="text-center">{{user.name}}</h1>
+        </div>
+        <div class="client-count-wrp-inner">
+            <!--card-->
+            <div class="cards">
+                <h4>{{postsCount}}</h4>
+                <p class="text-center">Posts</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-xl-12 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-uppercase">Albunes</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div *ngFor="let album of albums">
+                                <div class="media d-flex">
+                                    <div class="align-self-center me-3">
+                                        <h3>{{album.id}}</h3>
+                                    </div>
+                                    <div class="media-body text-right">
+                                        <span>{{album.title}}</span>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div>
+    <div class="card">
+        <div class="card-header">
+            <h2 class="text-center text-uppercase">Nuestros clientes</h2>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Visualizar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of usuarios">
+
+                            <td scope="row">{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.address!.city}}</td>
+                            <td>
+                                <li type="button" class="btn" style="background-color:#FF8000; color: #FFF;" routerLink="detail/{{user.id}}"><i class="bi bi-eye"></i></li>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

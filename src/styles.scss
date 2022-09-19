@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '@coreui/coreui/scss/coreui';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+.client-count-wrp {
+    background: #FF8000;
+}
+
+.heading h1 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+
+.client-count-wrp-inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards {
+    h1 {
+        color: #fff;
+        font-size: 70px;
+        line-height: 65px;
+    }
+    &:first-child h4 {
+        color: #009CA0;
+    }
+    &:nth-child(2) h4 {
+        color: #006DA0;
+    }
+    p {
+        color: #fff;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .client-count-wrp {
+        padding: 40px 0;
+    }
+    .client-count-wrp-inner {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .cards {
+        h4 {
+            font-size: 50px;
+            line-height: 40px;
+        }
+    }
+}
